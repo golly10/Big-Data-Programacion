@@ -1,6 +1,3 @@
-from functools import reduce
-from operator import itemgetter
-import sys
 import sys
 import io
 import re
@@ -41,7 +38,7 @@ class MapReducer():
                 self.all_words_mapper.append({word: 1})
 
     def print_results_mapper(self):
-        print("///// RESULTADOS TRAS EJECUTAR EL MAPPER /////")
+        print("///// RESULTADOS TRAS EJECUTAR MAPPER /////")
 
         for word in self.all_words_mapper:
             print('%s\t%s' % (word, 1))
@@ -60,7 +57,7 @@ class MapReducer():
                 self.all_words_reducer[list(word.keys())[0]] = 1
 
     def print_results_reducer(self):
-        print("///// RESULTADOS TRAS EJECUTAR EL REDUCER /////")
+        print("///// RESULTADOS TRAS EJECUTAR REDUCER /////")
 
         for word in self.all_words_reducer:
             print('%s\t%s' % (word, self.all_words_reducer[word]))
